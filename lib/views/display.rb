@@ -22,7 +22,8 @@ require 'colorize'
         puts ("|").colorize(:light_blue)
         puts ("-" * 50).colorize(:light_blue)
         puts ""
-        puts (" ATTENTION Dans ce jeux votre coup n'est pas compté si vous effectuez une mauvaise saisie! ").colorize(:color => :red, :background => :white)
+        puts (" " * 30) + ("  ATTENTION  ").colorize(:color => :red, :background => :white)
+        puts ("Dans ce jeux votre coup n'est pas compté si vous effectuez une mauvaise saisie! ").colorize(:color => :red, :background => :white)
         puts ""
     end
 

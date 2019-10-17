@@ -16,21 +16,21 @@ class Game
         welcome_page
         puts ""
         # crée le joueur 1
-        print ("Joueur 1, ton symbole sera X , choisis ton nom ").colorize(:color => :white, :background => :blue)
-        print (" :=> ").colorize(:color => :white, :background => :blue)
+        print (" Joueur 1, ton symbole sera X , choisis ton nom ").colorize(:color => :cyan)
+        print (" :=> ").colorize(:color => :cyan)
         name_player_1 = gets.chomp
             @player1 = Player.new(name_player_1, "X")
         puts ""
         # crée le joueur 2
-        print ("Joueur 2, ton symbole sera O , choisis un nom ").colorize(:color => :white, :background => :blue)
-        print (" :=> ").colorize(:color => :white, :background => :blue)
+        print (" Joueur 2, ton symbole sera O , choisis un nom ").colorize(:color => :cyan)
+        print (" :=> ").colorize(:color => :cyan)
         name_2 = gets.chomp
             @player2 = Player.new(name_2, "O")
         # crée le plateau de jeu
         @board = Board.new
         puts ""
         @whos_turn_player = @player1
-        puts " Voici le plateau de jeux vide, que la partie commence ! "
+        puts (" Voici le plateau de jeux vide, que la partie commence ! ").colorize(:color => :magenta)
         puts ""
     end
 
@@ -47,9 +47,9 @@ class Game
             puts ""
             puts ("=" * 60 ).colorize(:color => :red)
             puts ""
-            puts ("C'est le tour de #{@whos_turn_player.name} avec les #{@whos_turn_player.symbol}").colorize(:color => :white, :background => :blue)
-            puts ("Veuillez Choisir une case ").colorize(:color => :white, :background => :blue)
-            print (" :=> ").colorize(:color => :white, :background => :blue)
+            puts ("  C'est le tour de #{@whos_turn_player.name} avec les #{@whos_turn_player.symbol}").colorize(:color => :cyan)
+            print ("  Veuillez Choisir une case ").colorize(:color => :cyan)
+            print (" :=> ").colorize(:color => :cyan)
     
             # On appelle la méthode play de la classe board sur le joueur en cours . Elle demande au joueur quelle case il joue, puis affiche son symbole dans la case
             @board.play(@whos_turn_player.symbol)
@@ -58,11 +58,11 @@ class Game
             # On arrête la boucle en cas de victoire
             if @board.victory == true
                 puts ""
-                puts ("=" * 60 ).colorize(:color => :red)
+                puts ("=" * 60 ).colorize(:color => :green)
                 puts ""
                 end_page_win
                 puts ""
-                puts ("=" * 60 ).colorize(:color => :red)
+                puts ("=" * 60 ).colorize(:color => :green)
                 puts ""
                 abort
             end

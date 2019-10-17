@@ -16,17 +16,20 @@ class Board
         # affiche le plateau
         puts ""
         puts ""
-        puts ("                       A  |  B  | C                  ").colorize(:yellow)
-        puts ("                     -----------------").colorize(:yellow)
-        puts ("                    |     |     |     |").colorize(:yellow)
-        puts ("                  1 |  #{@board[0]}  |  #{@board[1]}  |  #{@board[2]}  |").colorize(:yellow)
-        puts ("                    |-----|-----|-----|").colorize(:yellow)
-        puts ("                    |     |     |     |").colorize(:yellow)
-        puts ("                  2 |  #{@board[3]}  |  #{@board[4]}  |  #{@board[5]}  |").colorize(:yellow)
-        puts ("                    |-----|-----|-----|").colorize(:yellow)
-        puts ("                    |  #{@board[6]}  |  #{@board[7]}  |  #{@board[8]}  |").colorize(:yellow)
-        puts ("                  3 |     |     |     |").colorize(:yellow)
-        puts ("                     -----------------").colorize(:yellow)
+        puts ("                        A   |   B   |    C                  ").colorize(:yellow)
+        puts ("                     -----------------------").colorize(:yellow)
+        puts ("                    |       |       |       |").colorize(:yellow)
+        puts ("                  1 |   #{@board[0]}   |   #{@board[1]}   |   #{@board[2]}   |").colorize(:yellow)
+        puts ("                    |       |       |       |").colorize(:yellow)
+        puts ("                    |-------|-------|-------|").colorize(:yellow)
+        puts ("                    |       |       |       |").colorize(:yellow)
+        puts ("                  2 |   #{@board[3]}   |   #{@board[4]}   |   #{@board[5]}   |").colorize(:yellow)
+        puts ("                    |       |       |       |").colorize(:yellow)
+        puts ("                    |-------|-------|-------|").colorize(:yellow)
+        puts ("                  3 |       |       |       |").colorize(:yellow)
+        puts ("                    |   #{@board[6]}   |   #{@board[7]}   |   #{@board[8]}   |").colorize(:yellow)
+        puts ("                    |       |       |       |").colorize(:yellow)
+        puts ("                     -----------------------").colorize(:yellow)
         puts ""
         puts ""
     end
