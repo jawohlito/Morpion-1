@@ -71,10 +71,12 @@ class Game
             #on passe au joueur suivant et on boucle (tour suivant) si pas de vainceur!
             players_change_turns
             i = i + 1
+            # on affiche les nombres de tour restants car le jeux continuer d'avancer et s'arrete a 9 coups maximum
             puts ""
             puts ""
             puts (" Il reste #{9 - i} tours avant la fin de la partie !").colorize(:cyan)
         end
+        #page d'affichage de la fin de partie sur une égalitée ou une partie nul
         end_page_draw
         puts ""
         mini_menu_replay
