@@ -64,7 +64,8 @@ class Game
                 puts ""
                 puts ("=" * 60 ).colorize(:color => :green)
                 puts ""
-                abort
+                mini_menu_replay
+                puts ""
             end
     
             #on passe au joueur suivant et on boucle (tour suivant) si pas de vainceur!
@@ -72,7 +73,24 @@ class Game
             i = i + 1
         end
         end_page_draw
-        abort
+        puts ""
+        mini_menu_replay
+    end
+
+
+    def mini_menu_replay
+        puts (" Voulez vous rejouer ? ").colorize(:magenta)
+        puts ""
+        puts ("       0        - > QUITTER LE JEU ").colorize(:cyan)
+        puts ("  autre touche  - > RECOMMENCER ").colorize(:cyan)
+        puts ""
+        print (" |-> ").colorize(:cyan)
+        choise = gets.chomp
+        if choise == "0"
+            abort
+        else
+            Game.new.game_launch
+        end
     end
 
 
