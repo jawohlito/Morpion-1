@@ -71,6 +71,9 @@ class Game
             #on passe au joueur suivant et on boucle (tour suivant) si pas de vainceur!
             players_change_turns
             i = i + 1
+            puts ""
+            puts ""
+            puts (" Il reste #{9 - i} tours avant la fin de la partie !").colorize(:cyan)
         end
         end_page_draw
         puts ""

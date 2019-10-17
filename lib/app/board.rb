@@ -38,6 +38,7 @@ class Board
     def play(symbol)
         # change la case jouée en fonction de ce qu'a joué le joueur (X, ou O)
         position = gets.chomp
+        if position == ("a1") || position == ("a2") || position == ("a3") || position == ("b1") || position == ("b2") || position == ("b3") || position == ("c1") || position == ("c2") || position == ("c3")
             if position == "a1" && @board[0] == " "
                 @board[0] = symbol
             end
@@ -65,11 +66,10 @@ class Board
             if position == "c3" && @board[8] == " "
                 @board[8] = symbol
             end
-            #if position != ("a1" && "a2" && "a3" && "b1" && "b2" && "b3" && "c1" && "c2" && "c3")
-            #    puts ""
-            #    puts " Mauvaise saisie, tu perd ton tour!"
-            #    puts ""
-            #end
+        else
+            puts ""
+            puts ("  Mauvaise saisie, cette case est déja utilisée, tu perds ton tour! ").colorize(:cyan)
+        end 
     end
 
     def victory
