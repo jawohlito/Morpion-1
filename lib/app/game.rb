@@ -60,6 +60,7 @@ class Game
                 puts ""
                 puts ("=" * 60 ).colorize(:color => :green)
                 puts ""
+                @board.to_s
                 end_page_win
                 puts ""
                 puts ("=" * 60 ).colorize(:color => :green)
